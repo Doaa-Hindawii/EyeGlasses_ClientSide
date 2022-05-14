@@ -1,0 +1,20 @@
+<div class="row g-1">
+    <div class="row g-1">
+        <div *ngFor="let product of products" class="col-md-3" style="margin: 2em;">
+            <div ProductCard class="card p-3" [class.hide]="product.quantity==0">
+                <div class="text-center">
+                <img [src]="createImgPath(product.imagePath)" width="200" height="250">
+                </div>
+                <div class="product-details text-center"> <span class="font-weight-bold d-block"><h3>{{product.name}}</h3></span>
+                    
+
+                    <button class="btn btn-warning col-12" #myID [value]="product.id" (click)="AddItemToCart(product.id)">Add to cart</button>
+
+                    <div class="weight text-center"> <span class="text-warning">{{product.price | currency }} </span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

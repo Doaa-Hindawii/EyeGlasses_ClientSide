@@ -1,0 +1,32 @@
+.hero-page {
+    background: url("../../../assets/Images/Bg-Glass8.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 80vh;
+    color: white;
+    font-size: 20px;
+  }
+  .ShoppingCart{
+    cursor: pointer;
+    width: 100%;
+  }
+  .ShoppingCart:hover{
+    background-color: whitesmoke;
+  }
+  .hero-page h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    line-height: 65px;
+  }
+  nav ul li a:hover {
+    color: #02225b;
+  }
+  nav a {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  nav a:hover {
+    color: #02225b;
+  }
