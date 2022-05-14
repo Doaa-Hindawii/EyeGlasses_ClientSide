@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     if(form !=null)
       form.reset();
     this.loginuser= {
-      email:'',
+      userName:'',
       password : ''
     }
   }
@@ -37,9 +37,7 @@ export class LoginComponent implements OnInit {
   this.UserService.loginUser(this.loginuser).subscribe((data:any)=>{
     if(data.Succeeded == true)
       this.reserform(form);
-      this.UserService.getUserByEmail(this.loginuser.email).subscribe((user=>{
-        this.router.navigate(['/profile'])
-        window.scrollTo(0, 0); 
+      this.UserService.getUserByEmail(this.loginuser.userName).subscribe((user=>{
         localStorage.setItem('username',user.userName)
           localStorage.setItem('userId',user.id)
         }))    

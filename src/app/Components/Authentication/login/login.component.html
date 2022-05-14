@@ -14,12 +14,13 @@
                             <div class="d-flex flex-row align-items-center mb-2">
                                 <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                 <div class="form-outline flex-fill mb-0">
-                                    <input type="text" id="form3Example1c" class="form-control" name="Email"
-                                        [class.is-invalid]="email.invalid && email.touched "
-                                        [class.is-invalid]="email.invalid && email.touched " required #email="ngModel"
-                                        [(ngModel)]="loginuser.email" />
-                                    <small class="text-danger" [class.d-none]="email.untouched || email.valid">Email
-                                        Address is required</small>
+                                    <input type="text" id="form3Example1c" class="form-control"
+                                        [class.is-invalid]="userName.invalid && userName.touched "
+                                        [class.is-invalid]="userName.invalid && userName.touched " required
+                                        #userName="ngModel" [(ngModel)]="loginuser.userName" name="userName">
+                                    <small class="text-danger"
+                                        [class.d-none]="userName.untouched || userName.valid">User Name is
+                                        required</small>
                                     <label class="form-label" for="form3Example1c">Email</label>
                                 </div>
                             </div>
